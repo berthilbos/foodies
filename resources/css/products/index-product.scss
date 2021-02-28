@@ -1,0 +1,35 @@
+
+#product-table{
+    padding-top: 0;
+}
+
+#product-table .table .table-bordered{
+    color: black;
+    border: solid 1px black ;
+    border-radius: 1em;
+}
+
+#create-product .btn-success{
+    background-color: #0CBE57;
+    color: white;
+}
+
+#create-product .btn-success:hover{
+    background-color:#0cbe56d1 ;
+}
+
+#create-product .btn-success a{
+    color: white;
+}
+
+#create-product .btn-success a:hover{
+    color: #f1f1f1;
+}
+
+#product-table .btn-info{
+    background-color: #0CBE57;
+    color: white;
+}
+#product-table .table .delete{
+    display: inline;
+}

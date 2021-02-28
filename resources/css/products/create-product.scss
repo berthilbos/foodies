@@ -1,0 +1,21 @@
+#create-product h2{
+    color: black;
+}
+
+#create-product .add-product-tag{
+    font-weight: 700;
+    color: black;
+}
+
+.back-button{
+    margin: 10px 0;
+    box-shadow: 0 1px 5px rgba($color: #000000, $alpha: .10);
+}
+
+.back-button a{
+    color: white;
+}
+
+.back-button a:hover{
+    color: whitesmoke;
+}

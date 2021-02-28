@@ -1,0 +1,101 @@
+#restaurant-detail .row .box h5{
+    color:black;
+}
+
+#restaurant-detail .restaurant-about h3{
+    color:black;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+#restaurant-detail .restaurant-about {
+    padding-left: 15px;
+}
+
+#restaurant-detail .box .order-button{
+    background-color:  #0CBE57;
+    border: 0.5px solid #0aae4f;
+    margin-top: 10px;
+    box-shadow: 0px 1px 5px rgba($color: #000000, $alpha: 0.10) ;
+}
+
+#restaurant-detail .box .order-button .is-link{
+    color:white;
+}
+
+#image-header-show-restaurant{
+    width: 100%;
+    height: 350px;
+    background: url('../img/sushi-01.jpg') center center;
+    background-size: cover;
+    position: relative;
+    padding: 0;
+    // border-bottom:0.5px solid #0CBE57;
+    box-shadow:  0px 1px 3px rgba(0,0, 0,.3);
+  }
+
+
+.restaurant-detail .box {
+    padding: 20px 30px;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    transition: all ease-in-out 0.3s;
+    background: white;
+    color:black;
+    border-radius: 0.5em;
+    margin: 20px 0;
+
+  }
+.restaurant-detail .box p {
+    color: $restaurant-color;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .restaurant-detail .box .img{
+    flex: 0 0 98px;
+    text-align: center;
+    border-right: 1px solid #ebebeb;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+  }
+
+  .restaurant-detail .box{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+    border: 1px solid #ebebeb;
+    cursor: pointer;
+
+  }
+
+   .restaurant-detail .box li {
+      display: inline;
+  }
+//    .box ul {
+//      display: block;
+//  }
+
+
+//   .restaurant-detail .box div{
+//       display: flex;
+//   }
+
+
+  .restaurant-detail .box:hover {
+    background-color: #f1f1f1;
+    padding: 30px 30px 30px 30px;
+    color: #0CBE57;
+    box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.18);
+  }
+
+  .restaurant-detail .box:hover span, .restaurant-detail .box:hover h4 a, .restaurant-detail .box:hover h5{
+    color:#0CBE57;
+  }
+
+  .restaurant-detail .box:hover p {
+      color: grey;
+  }

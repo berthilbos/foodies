@@ -1,0 +1,38 @@
+#product-order .order-restaurant{
+    color: black;
+    font-weight: 600;
+}
+
+
+#product-order .order-title{
+    color: black;
+    display: inline-block;
+    font-weight: 700;
+}
+
+#product-order .order-product{
+    color: black;
+    display: inline;
+}
+
+#product-order .order-view{
+    padding: 0;
+}
+
+#product-order{
+    height: 60vh;
+}
+
+#product-order .order-button{
+    margin-top: 15px;
+    background-color: #0CBE57;
+    color: white;
+    border: 0.5px solid #0ca24b;
+    box-shadow: 0 1px 5px rgba($color: #000000, $alpha: .1);
+}
+
+#input_div input{
+    border: 0.5px solid #cdcdcd;
+    box-shadow: 0 1px 5px rgba($color: #000000, $alpha: .1);
+    border-radius: 0.2em;
+}

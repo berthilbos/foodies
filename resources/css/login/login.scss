@@ -1,0 +1,29 @@
+
+#login{
+    padding:250px 0px;
+}
+
+#login .col-lg-12 {
+    background-color: #f1f1f1;
+    border: 1px solid #e4e4e4ba;
+    border-radius: 1em;
+    padding: 0px;
+    box-shadow: 0px 1.5px 5px rgba($color: #000000, $alpha: 0.1);
+}
+
+#login .container {
+    padding: 0px;
+}
+
+#login .col-lg-12 .card-header{
+    background-color: #0CBE57;
+    border-radius:0.5em;
+}
+
+#login .card-body .col-md-4{
+    color: black;
+}
+
+#login .form-group .remember{
+    color: black;
+}
