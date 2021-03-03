@@ -19,7 +19,15 @@
                                     <h4 class="order-restaurant"></h4>
                                     <h4 class="order-restaurant">€ </h4>
                                     <h6 class="order-title">Your order:</h6>
-                                    
+                                    <p>Products:
+                                      {{}}
+                                  </p>
+                                  <p>Total Price: €<?php
+                                      $order = session()->get('order');
+                                      if($order == null){echo("0");}
+                                      else {$totalprice = array_sum(array_column($order, 'productTotalPrice'));
+                                      echo($totalprice);}?>
+                                  </p>
 
 
 
