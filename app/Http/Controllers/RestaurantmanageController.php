@@ -77,8 +77,8 @@ $areaID = $areaIdCollection[0]->id;
 
 // Get Id from added restaurant table row, based on name and add it to the area_restuarant table together with the area ID. 
 $restaurantname = $request->input('restaurant_name');
-$restaurantID = DB::table('restaurants')->where('restaurant_name', $restaurantname)->pluck('id');
-$restaurantid = $restaurantID->get(0);
+$restaurant = DB::table('restaurants')->where('restaurant_name', $restaurantname)->pluck('id');
+$restaurantid = $restaurant->get(0);
 DB::table('area_restaurant')->insert(array('restaurant_id' => $restaurantid, 'area_id' => $areaID ));
 
 return redirect()->route('restaurants.index')

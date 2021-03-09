@@ -55,10 +55,71 @@
                             </div>
                         </div>
                         <div class="form-group row">
+                            <label for="password" class="col-md-4 col-form-label text-md-right" >{{ __('Password') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+
+                                @error('password')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right" >{{ __('Confirm Password') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                            </div>
+                        </div>
+                        <div class="form-group row">
                             <label for="street" class="col-md-4 col-form-label text-md-right" >{{ __('Street') }}</label>
 
                             <div class="col-md-6">
                                 <input id="street" type="text" class="form-control @error('name') is-invalid @enderror" name="street" value="{{ old('name') }}" required autocomplete="street" autofocus>
+
+                                @error('name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+                        
+                        <div class="form-group row">
+                            <label for="house_number" class="col-md-4 col-form-label text-md-right" >{{ __('House Number') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="house_number" type="text" class="form-control @error('name') is-invalid @enderror" name="house_number" value="{{ old('name') }}" required autocomplete="house_number" autofocus>
+
+                                @error('name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="house_number_addition" class="col-md-4 col-form-label text-md-right" >{{ __('House Number Addition') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="house_number_addition" type="text" class="form-control @error('name') is-invalid @enderror" name="house_number_addition" value="{{ old('name') }}"  autofocus>
+
+                                @error('name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="postal_code" class="col-md-4 col-form-label text-md-right" >{{ __('Postal code') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="postal_code" type="text" class="form-control @error('name') is-invalid @enderror" name="postal_code" value="{{ old('name') }}" required autocomplete="postal_code" autofocus>
 
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -93,67 +154,11 @@
                                 @enderror
                             </div>
                         </div>
-                        <div class="form-group row">
-                            <label for="postal_code" class="col-md-4 col-form-label text-md-right" >{{ __('Postal code') }}</label>
+                       
+                        
+                        
 
-                            <div class="col-md-6">
-                                <input id="postal_code" type="text" class="form-control @error('name') is-invalid @enderror" name="postal_code" value="{{ old('name') }}" required autocomplete="postal_code" autofocus>
-
-                                @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="house_number" class="col-md-4 col-form-label text-md-right" >{{ __('House Number') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="house_number" type="text" class="form-control @error('name') is-invalid @enderror" name="house_number" value="{{ old('name') }}" required autocomplete="house_number" autofocus>
-
-                                @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="house_number_addition" class="col-md-4 col-form-label text-md-right" >{{ __('House Number Addition') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="house_number_addition" type="text" class="form-control @error('name') is-invalid @enderror" name="house_number_addition" value="{{ old('name') }}"  autofocus>
-
-                                @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right" >{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right" >{{ __('Confirm Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-                            </div>
-                        </div>
+                        
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">

@@ -51,6 +51,8 @@
 </tr>
 @endforeach
 </table>
+
+
 {!! $restaurants->render() !!}
 
 @endsection

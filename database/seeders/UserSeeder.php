@@ -4,7 +4,8 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Database\Eloquent\Model;
+use App\Models\User;
+
 
 class UserSeeder extends Seeder
 {
@@ -15,46 +16,38 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('users')->insert([
-            'password' => 'welkom01',
-            'first_name' => 'Jon',
-            'last_name' => 'Hogendorp',
-            'email' => 'jon@hogendorp.nl',
+        $user = User::create([
+            'first_name' => 'Berthil',
+            'last_name' => 'Bos',
+            'email' => 'berthil@bos.com',
             'street' => 'dorpstraat',
             'house_number' => 1,
             'house_number_addition' => 'A',
-            'postal_code' => '9701AA',
+            'postal_code' => '9702AA',
             'city' => 'Groningen',
             'phone' => '0612345678',
+            'password' => bcrypt('welkom01'),
 
-        ]);
+]);
 
-        DB::table('users')->insert([
-            'password' => 'welkom01',
-            'first_name' => 'Nart',
-            'last_name' => 'Ibrahem',
-            'email' => 'nart@ibrahem.nl',
-            'street' => 'dorpstraat',
-            'house_number' => 3,
-            'house_number_addition' => 'A',
-            'postal_code' => '9701AA',
-            'city' => 'Groningen',
-            'phone' => '0612345678',
+$role = DB::table('roles')->where('name', 'customer')->first();
+$user->assignRole([$role->id]);
 
-        ]);
+$user = User::create([
+    'first_name' => 'Admin',
+    'last_name' => 'Admin',
+    'email' => 'admin@gmail.com',
+    'street' => 'dorpstraat',
+    'house_number' => 3,
+    'house_number_addition' => 'A',
+    'postal_code' => '9701AA',
+    'city' => 'Groningen',
+    'phone' => '0612345678',
+    'password' => bcrypt('111111111'),
 
-        DB::table('users')->insert([
-            'password' => 'welkom01',
-            'first_name' => 'Berthil',
-            'last_name' => 'Bos',
-            'email' => 'berthil@bos.nl',
-            'street' => 'dorpstraat',
-            'house_number' => 5,
-            'house_number_addition' => 'A',
-            'postal_code' => '9701AA',
-            'city' => 'Groningen',
-            'phone' => '0612345678',
+]);
 
-        ]);
+$role = DB::table('roles')->where('name', 'Admin')->first();
+$user->assignRole([$role->id]);
     }
 }
