@@ -20,7 +20,7 @@
         "resolve-url-loader": "^3.1.2",
         "sass": "^1.32.8",
         "sass-loader": "^8.0.0",
-        "vue": "^2.6.12",
+        "vue": "^3.0.7",
         "vue-loader": "^15.9.6",
         "vue-template-compiler": "^2.6.10"
     },
@@ -28,5 +28,8 @@
         "depcheck": "^1.4.0",
         "hash": "^0.2.1",
         "owl.carousel": "^2.3.4"
+    },
+    "optionalDependencies": {
+        "fsevents": "^2.3.2"
     }
 }
