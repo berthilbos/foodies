@@ -17,7 +17,8 @@ public function run()
 {
 
 $role = Role::create(['name' => 'customer']);
-$role->syncPermissions( 'restaurant-list');
+$permissions = 'restaurant-list';
+$role->syncPermissions($permissions);
 
 $role = Role::create(['name' => 'Admin']);
 $permissions = Permission::pluck('id','id')->all();

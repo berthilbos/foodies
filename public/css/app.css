@@ -7429,7 +7429,6 @@ button.bg-dark:focus {
 }
 
 .position-sticky {
-  position: -webkit-sticky !important;
   position: sticky !important;
 }
 
@@ -7449,9 +7448,8 @@ button.bg-dark:focus {
   z-index: 1030;
 }
 
-@supports ((position: -webkit-sticky) or (position: sticky)) {
+@supports (position: sticky) {
   .sticky-top {
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 1020;
@@ -12026,10 +12024,6 @@ h1 .logo {
   color: grey;
 }
 
-#login {
-  padding: 250px 0px;
-}
-
 #login .col-lg-12 {
   background-color: #f1f1f1;
   border: 1px solid #e4e4e4ba;
@@ -12053,10 +12047,6 @@ h1 .logo {
 
 #login .form-group .remember {
   color: black;
-}
-
-#register {
-  padding: 250px 0px;
 }
 
 #register .col-lg-8 {
