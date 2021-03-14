@@ -24,18 +24,10 @@
         </div>
 
         <div class="col-lg-2 col-md-6 footer-links">
-          <h4>Steden</h4>
-          <ul>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Amsterdam</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Den Haag</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Rotterdam</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Utrecht</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Groningen</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Eindhoven</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Maastricht</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Leeuwarden</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Tilburg</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Nijmegen</a></li>
+          <h4>New Restaurants</h4>
+          <ul>@foreach ($newrestaurants as $item)
+            <li><i class="bx bx-chevron-right"></i> <a href="#">{{$item->restaurant_name}}</a></li>
+            @endforeach
           </ul>
         </div>
 
@@ -81,8 +73,7 @@
 <a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>
 
 <!-- assets JS Files -->
-<script src="/js/orderoverlay.js"></script>
-<script src="/js/orderquantity.js"></script>
+
 <script src="/assets/jquery/jquery.min.js"></script>
 <script src="/assets/jquery/jquery.min.js"></script>
 <script src="/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -94,9 +85,9 @@
 <script src="/assets/aos/aos.js"></script>
 
 
-<!-- Template Main JS File -->
+<!-- Main JS File -->
 <script src="/js/main.js"></script>
-<script src="/js/orderoverlay.js"></script>
+<script src="/js/cancelorder.js"></script>
 </body>
 
 </html>

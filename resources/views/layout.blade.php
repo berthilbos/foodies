@@ -11,8 +11,8 @@
       </div>
       <div class="languages">
         <ul>
-          <li>En</li>
-          <li><a href="#">De</a></li>
+          <li></li>
+          
         </ul>
       </div>
     </div>

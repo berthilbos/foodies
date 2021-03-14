@@ -149,6 +149,7 @@ return [
 
     'attributes' => [],
     'postal_code' => 'Your postal code was incorrect',
+    'quantity' => 'You must order between 1 and 25 items',
 
     
 ];

@@ -1,55 +1,59 @@
 @extends('layout')
-  @section('content')
-    <section id="image-header-show-restaurant"></section>
-    <section id="product-order" class="product-order search-results">
-      <div class="container">
-            {{-- <h2 class="order-restaurant">{{$product->restaurants->restaurant_name}}</h2>
-                <h3 class="order-title">Your order:</h3>
-                    <h3 class="order-product">{{$product->food_name}}</h3> --}}
+@section('content')
+<section id="image-header-show-restaurant">
+</section>
+<section id="product-order" class="product-order search-results">
+    <div class="container">
+        <div class="row">
+            <div class=" col-lg-12 order-view" data-aos="zoom-in" data-aos-delay="100" >
+                <div class="box" data-aos="zoom-in" data-aos-delay="100">
+                        <li class="col-lg-2 img">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+                                    <path id="Icon_awesome-pizza-slice" data-name="Icon awesome-pizza-slice" d="M15.515.015a3.221,3.221,0,0,0-3.45,2.356l-1.446,5.5C28.941,8.4,41.336,20.621,42.111,38.824l5.561-1.541a3.222,3.222,0,0,0,2.307-3.506A38.812,38.812,0,0,0,15.515.015ZM9.8,10.953.053,48.014a1.583,1.583,0,0,0,1.953,1.929L39.019,39.678C38.6,22.6,27,11.148,9.8,10.957Zm2.7,29.674A3.125,3.125,0,1,1,15.625,37.5,3.125,3.125,0,0,1,12.5,40.627Zm4.688-14.844a3.125,3.125,0,1,1,3.125-3.125A3.125,3.125,0,0,1,17.188,25.782ZM27.344,35.939a3.125,3.125,0,1,1,3.125-3.125A3.125,3.125,0,0,1,27.344,35.939Z" transform="translate(-0.001 0)" fill="#0cbe57"/>
+                                </svg>
+                        </li>
+                        <li class="col-lg-10">
+                            <form method="GET" action="{{route('session')}}" class="orderoverlay" id="orderoverlay" name="orderoverlay">
+                                @csrf
+                            <li class="col-lg-10">
+                                <h4 class="order-restaurant">{{$product->restaurants->restaurant_name}}</h4>
+                                <h4 class="order-restaurant">{{$product->food_name}}</h4>
+                                <h4 class="order-restaurant">€ {{$product->price}}</h4>
+                                <h6 class="order-title">Your order:</h6>
+            
+                            </li> <div hidden>
+                                <label for="Restaurant"></label>
+                                <input type="text" class="restaurant" name="restaurant" id="restaurant" value="{{$product->restaurants->restaurant_name}}" style="display: none;" required>
+                            </div>
+                            <div hidden>
+                                <label for="Product"></label>
+                                <input type="text" class="product" name="product" id="product" value="{{$product->food_name}}" style="display: none;" required>
+                            </div>
+                            <div hidden>
+                                <label for="price"></label>
+                                <input type="text" class="price" name="price" id="price" value="{{$product->price}}" style="display: none;" required>
+                            </div >
+                            <div id="input_div">
+                                <input type="number" value="1" name="quantity" id="quantity" min="1" max="25">
+                                <p>{{$errors->first('orderoverlay')}}</p>
+                            </div>
+                            
+                            <button class="btn btn-primary order-button is-link" type="submit">Confirm</button>
+                            <button class="btn btn-primary order-button is-link" id="cancelorder" formaction="/restaurants/{{$product->restaurants->id}}"></a>Cancel</button>
+                        </form>
+                        </li>
+                </div>
+            </div>
 
-                    <div class="col-lg-12 order-view" data-aos="zoom-in" data-aos-delay="100" >
-                        <div class="box" data-aos="zoom-in" data-aos-delay="100">
+        </div>
+    </div>
 
-                                <li class="col-lg-2 img">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
-                                            <path id="Icon_awesome-pizza-slice" data-name="Icon awesome-pizza-slice" d="M15.515.015a3.221,3.221,0,0,0-3.45,2.356l-1.446,5.5C28.941,8.4,41.336,20.621,42.111,38.824l5.561-1.541a3.222,3.222,0,0,0,2.307-3.506A38.812,38.812,0,0,0,15.515.015ZM9.8,10.953.053,48.014a1.583,1.583,0,0,0,1.953,1.929L39.019,39.678C38.6,22.6,27,11.148,9.8,10.957Zm2.7,29.674A3.125,3.125,0,1,1,15.625,37.5,3.125,3.125,0,0,1,12.5,40.627Zm4.688-14.844a3.125,3.125,0,1,1,3.125-3.125A3.125,3.125,0,0,1,17.188,25.782ZM27.344,35.939a3.125,3.125,0,1,1,3.125-3.125A3.125,3.125,0,0,1,27.344,35.939Z" transform="translate(-0.001 0)" fill="#0cbe57"/>
-                                        </svg>
-                                </li>
-                                <form method="GET" action="{{route('session')}}" class="orderoverlay" id="orderoverlay" name="orderoverlay">
-                                    @csrf
-                                <li class="col-lg-10">
-                                    <h4 class="order-restaurant">{{$product->restaurants->restaurant_name}}</h4>
-                                    <h4 class="order-restaurant">{{$product->food_name}}</h4>
-                                    <h4 class="order-restaurant">€ {{$product->price}}</h4>
-                                    <h6 class="order-title">Your order:</h6>
-                                    
+</section>
 
 
 
 
+@endsection
 
-                                </li> <div hidden>
-                                    <label for="Restaurant"></label>
-                                    <input type="text" class="restaurant" name="restaurant" id="restaurant" value="{{$product->restaurants->restaurant_name}}" style="display: none;" required>
-                                </div>
-                                <div hidden>
-                                    <label for="Product"></label>
-                                    <input type="text" class="product" name="product" id="product" value="{{$product->food_name}}" style="display: none;" required>
-                                </div>
-                                <div hidden>
-                                    <label for="price"></label>
-                                    <input type="text" class="price" name="price" id="price" value="{{$product->price}}" style="display: none;" required>
-                                </div >
-                                <div id="input_div">
-                                    <input type="number" value="1" name="quantity" id="quantity"  min="1" max="25">
-                                </div>
-                                
-                                <button class="btn btn-primary order-button is-link" type="submit">Confirm</button>
-                                <button class="btn btn-primary order-button is-link"><a href="javascript:history.back()"></a>Cancel</button>
-                            </form>
-                        </div>
-                    </div>
 
-                
-    </section>
-  @endsection
+

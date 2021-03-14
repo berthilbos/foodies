@@ -18,14 +18,17 @@ use Illuminate\Support\Facades\Auth;
 //     return view('home');
 // });
 
-// Route::get('/', '\App\Http\Controllers\HomeController@index');
+Route::get('/', '\App\Http\Controllers\HomeController@index');
 
 
  Auth::routes();
 
- Route::get('/', function () {
+ Route::get('/home', function () {
     return view('home');
 });
+
+
+
 Route::group(['middleware' => ['auth']], function() {
     Route::resource('/roles','App\Http\Controllers\RoleController');
     Route::resource('/users', 'App\Http\Controllers\UserController');
@@ -33,26 +36,24 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('products','App\Http\Controllers\ProductController');
     Route::get('orders/{order}/order','App\Http\Controllers\ShoppingController@order');
     Route::get('session', 'App\Http\Controllers\ShoppingController@put')->name('session');
-    Route::get('getsession', 'App\Http\Controllers\ShoppingController@get')->name('getsession');
+    Route::get('get', 'App\Http\Controllers\ShoppingController@get')->name('get');
     Route::get('delete', 'App\Http\Controllers\ShoppingController@delete')->name('delete');
     Route::get('orders.show', 'App\Http\Controllers\ShoppingController@show')->name('show');
     Route::get('orders.confirm', 'App\Http\Controllers\ShoppingController@purchase')->name('purchase');
     
     });
- 
 
-Route::get('/info', function () {
-    return view('info');
-});
+
 
 
 
  Route::get('/contact', 'App\Http\Controllers\ContactController@index')->name('contact');
- Route::get('/restaurant', 'App\Http\Controllers\RestaurantController@index')->name('restaurant');
+
+
+    
  Route::post('/search', 'App\Http\Controllers\AreaController@index')->name('searchresults');
- Route::get('/restaurants/{show}', '\App\Http\Controllers\RestaurantController@show')->name('restaurants.show');
  Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home');
- Route::get('test', function() { return view('testurl');});
+
 
 
  

@@ -1,6 +1,4 @@
 {
     "/js/main.js": "/js/main.js",
-    "/js/orderquantity.js": "/js/orderquantity.js",
-    "/css/app.css": "/css/app.css",
-    "/js/orderoverlay.js": "/js/orderoverlay.js"
+    "/css/app.css": "/css/app.css"
 }

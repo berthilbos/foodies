@@ -162,7 +162,7 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-primary order-button" id="registerbutton">
                                     {{ __('Register') }}
                                 </button>
                             </div>
@@ -174,4 +174,10 @@
     </div>
 </div>
 </section>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 @endsection

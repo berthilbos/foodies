@@ -15,9 +15,21 @@
 
 #register .col-lg-8 .card-header{
     background-color: #0CBE57;
-    border-radius: 1em;
 }
 
 #register .card-body .col-md-4{
     color: black;
 }
+
+#remember{
+    color: black;
+}
+
+#registerbutton{
+    margin-top: 15px;
+    background-color: #0CBE57;
+    color: white;
+    border: 0.5px solid #0ca24b;
+    box-shadow: 0 1px 5px rgb(0 0 0 / 10%);
+}
+

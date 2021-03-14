@@ -8,6 +8,8 @@ class ShoppingController extends Controller
 {
     public function put(Request $request){
 
+    $this->validateShoppingCart();
+
     $restaurant = $request->input('restaurant');
     $product = $request->input('product');
     $price = floatval($request->input('price'));
@@ -66,6 +68,16 @@ class ShoppingController extends Controller
         return view('orders.show');
 
     }
+
+    protected function validateShoppingCart()
+        {
+             request()->validate([
+                'restaurant' => 'required',
+                'product' => 'required',
+                'price' => 'required',
+                'quantity' => 'required'
+                ]);
+        }
 
 }
 
