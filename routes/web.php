@@ -54,6 +54,9 @@ Route::group(['middleware' => ['auth']], function() {
  Route::post('/search', 'App\Http\Controllers\AreaController@index')->name('searchresults');
  Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home');
 
+ Route::get('/test', function () {
+    return view('test');
+});
 
 
  

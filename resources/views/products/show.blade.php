@@ -10,7 +10,7 @@
 
 
             <section id="product-detail" class="restaurant-detail">
-                <div data-aos="fade-up">
+                <div>
                     <div class="row">
                         <div class=" col-lg-12" data-aos="zoom-in" data-aos-delay="100">
                             <div class="box" data-aos="zoom-in" data-aos-delay="100">
@@ -39,26 +39,5 @@
                 </div>
             </section>
 
-            {{-- <div id="show-product-spec" class="row" >
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                    <div class="form-group show-text">
-                        <strong class="show-text">Food Name:</strong>
-                        {{ $product->food_name }}
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                    <div class="form-group show-text">
-                        <strong class="show-text">Size:</strong>
-                        {{ $product->size }}
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                    <div class="form-group show-text">
-                        <strong class="show-text">Price:</strong>
-                        {{ $product->price }}
-                    </div>
-                </div>
-            </div>
-        </div> --}}
     </section>
 @endsection

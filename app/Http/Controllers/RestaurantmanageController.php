@@ -83,6 +83,9 @@ DB::table('area_restaurant')->insert(array('restaurant_id' => $restaurantid, 'ar
 return redirect()->route('restaurants.index')
 ->with('success','Restaurant created successfully.');
 }
+
+
+
 /**
 * Display the specified resource.
 *
@@ -91,8 +94,14 @@ return redirect()->route('restaurants.index')
 */
 public function show(Restaurant $restaurant)
 {
-return view('restaurants.show',compact('restaurant'));
+     
+
+    return view('restaurants.show', ['restaurant' => $restaurant]);
 }
+
+
+
+
 /**
 * Show the form for editing the specified resource.
 *

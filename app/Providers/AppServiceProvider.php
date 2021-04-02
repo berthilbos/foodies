@@ -6,6 +6,7 @@ use Illuminate\Support\ServiceProvider;
 use Illuminate\Pagination\Paginator;
 use App\Models\Restaurant;
 use Illuminate\Support\Facades\View;
+use Hashids\Hashids;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -16,7 +17,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->bind(Hashids::class, function () {
+            return new Hashids(env('HASHIDS_SALT'), 10);
+        });
+       
     }
 
     /**

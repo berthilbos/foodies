@@ -164,6 +164,7 @@ return [
         Axlon\PostalCodeValidation\ValidationServiceProvider::class,
         Spatie\Permission\PermissionServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
+        Torann\Hashids\HashidsServiceProvider::class,
         
 
         /*
@@ -232,6 +233,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
+        'Hashids' => Torann\Hashids\Facade\Hashids::class,
 
     ],
 

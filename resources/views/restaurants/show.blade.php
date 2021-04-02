@@ -1,12 +1,9 @@
 @extends('layout')
 @section('content')
 
-
-    @if (session()->has('order'))
-        @unless(Session::get('order')[0]['restaurant'] == $restaurant->restaurant_name)
-            <?php session()->forget('order'); ?>
-        @endunless
-    @endif
+    @unless(session()->has('order') and Session::get('order')[0]['restaurant'] == $restaurant->restaurant_name)
+        <?php session()->forget('order'); ?>
+    @endunless
 
     <section id="image-header-show-restaurant">
 

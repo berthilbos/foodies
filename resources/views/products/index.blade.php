@@ -7,7 +7,7 @@
         <div class="container">
             <div class="">
 
-                {{-- <h2>Products Management</h2> --}}
+
 
                 <div>
                     <button class="btn btn-success"><a href="{{ route('products.create') }}"> Create New
@@ -41,11 +41,6 @@
                         <td>{{ $product->size }}</td>
                         <td>{{ $product->price }}</td>
                         <td>
-                            {{-- @if (!empty($product->getRoleNames()))
-                @foreach ($product->getRoleNames() as $v)
-                <label class="badge badge-success">{{ $v }}</label>
-                @endforeach
-                @endif --}}
                         </td>
                         <td>
                             <a class="btn btn-info" href="{{ route('products.show', $product->id) }}">Show</a>
@@ -63,8 +58,8 @@
             </table>
         </div>
     </section>
-    {{-- {!! $products->render() !!} --}}
-    {
+
+    
 
 
 @endsection
